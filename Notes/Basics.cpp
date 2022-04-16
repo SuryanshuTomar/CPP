@@ -1,0 +1,112 @@
+// => FIRST PROGRAM -
+
+// This brings in the iostream library
+#include <iostream>
+int main(){
+   // This is going to print "Hello World !!" to the console
+   std::cout << "Hello World !!" << std::endl;
+   return 0;
+   // Program ends here
+}
+
+// -------------------------------------------------------------------------------------------------------
+// => COMMENTS - 
+
+// 1. // This is a One Liner Comment which starts with "//" double forward slashes
+/* 2. 
+   This 
+   is
+   a
+   Multiline
+   Comment
+ */
+
+// Note:
+// 1. Block Comments out the block of text and can't be nested.
+// 2. Use comments to document the code but don't overdo it
+
+// ----------------------------------------------------------------------------------------------------
+// => ERRORS - 
+
+// - There are -
+// 1. Compile Time Errors - (Syntax And Semantic Errors)
+      // a. Syntax Errors
+      // b. Semantic Errors
+// 2. Run Time Errors
+// 3. Linker Errors
+// 4. Logical Errors
+// 5. Warnings
+
+// - The goal of every c++ code is to be converted into a binary executable and we have to run through the compiler to be able to do that. And there are set of requirements that the compiler enforces on our code for it to be able to compile successfully into the binary executable code. And these requirements are the rules that a developer has to follow in order to be able to write a c++ code and if these rules are broken then we are going to face problem while running the code and the compiler will show these problems in the form of these 3 types of Errors.
+
+
+// 1. Syntax Errors - 
+// - This kind of errors are occurred, when it violates the rule of C++ writing techniques or syntaxes. This kind of errors are generally indicated by the compiler before compilation. Sometimes these are known as compile time error.
+// - In this example, we will see how to get syntax error if we do not put semicolon after one line.
+
+// - Example -
+#include<iostream>
+int main() {
+   std::cout << "Hello World" ;
+}
+// - Output -
+// Error] expected ';' before '}' token
+
+// 2. Runtime Errors -
+// - This kind of errors are occurred, when the program is executing. As this is not compilation error, so the compilation will be successfully done. We can check this error if we try to divide a number with 0.
+
+// - Example - 
+#include<iostream>
+int main() {
+   int x = 52;
+   int y = 0;
+   std::cout << "Div : %f", x/y;
+}
+// - Output -
+// Program crashes during runtime.
+
+
+// 3. Linker Errors - 
+// - This kind of errors are occurred, when the program is compiled successfully, and trying to link the different object file with the main object file. When this error is occurred, the executable is not generated, For example some wrong function prototyping, incorrect header file etc. If the main() is written as Main(), this will generate linked error.
+
+// - Example -
+#include<iostream>
+int main() {
+   int x = 52;
+   int y = 0;
+   std::cout << "Div : %f", x/y;
+}
+// - Output -
+// C:\crossdev\src\mingw-w64-v3-git\mingw-w64-crt\crt\crt0_c.cundefined reference to `WinMain'
+
+
+// 4. Logical Errors -
+// - Sometimes, we may not get the desired output. If the syntax and other things are correct, then also, we may not get correct output due to some logical issues. These are called the logical error. Sometimes, we put a semicolon after a loop, that is syntactically correct, but will create one blank loop. In that case, it will show desired output.
+
+// - Example -
+#include<iostream>
+int main() {
+   int i;
+   for(i = 0; i<5; i++); {
+      std::cout << "Hello World";
+   }
+}
+// - Output -
+// Here we want the line will be printed five times. But only one time it will be printed for the block of code.
+
+// 5. Semantic Errors -
+// - This kind of error occurs when it is syntactically correct but has no meaning. This is like grammatical mistakes. If some expression is given at the left side of assignment operator, this may generate semantic error.
+
+// - Example -
+#include<iostream>
+int main() {
+   int x, y, z;
+   x = 10;
+   y = 20;
+   // x + y = z;
+}
+// - Output -
+// [Error] lvalue required as left operand of assignment
+
+// 6. Warnings - 
+// - Compiler warnings are messages produced by a compiler regarding program code fragments to be considered by the developer, as they may contain errors. Unlike compilation errors, warnings don't interrupt the compilation process.

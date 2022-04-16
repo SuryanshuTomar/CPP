@@ -1,7 +1,5 @@
 {
 	"files.associations": {
-		"ostream": "cpp",
-		"iostream": "cpp",
 		"atomic": "cpp",
 		"bit": "cpp",
 		"cctype": "cpp",
@@ -20,11 +18,13 @@
 		"initializer_list": "cpp",
 		"ios": "cpp",
 		"iosfwd": "cpp",
+		"iostream": "cpp",
 		"istream": "cpp",
 		"iterator": "cpp",
 		"limits": "cpp",
 		"memory": "cpp",
 		"new": "cpp",
+		"ostream": "cpp",
 		"stdexcept": "cpp",
 		"streambuf": "cpp",
 		"system_error": "cpp",
