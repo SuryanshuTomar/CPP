@@ -110,3 +110,26 @@ int main() {
 
 // 6. Warnings - 
 // - Compiler warnings are messages produced by a compiler regarding program code fragments to be considered by the developer, as they may contain errors. Unlike compilation errors, warnings don't interrupt the compilation process.
+
+
+// -------------------------------------------------------------------------------------------------------
+// => STATEMENTS -
+
+// 1. A Statement is a basic unit of computation in a c++ program.
+// 2. Every C++ program is a collection of statements organized in a certain way to achieve some goal.
+// 3. Statements end with a semicolon(;) in C++;
+// 4. Statement are executed in order from top to bottom when program is run.
+// 5. Execution keeps going until there is a statement causing the program to terminate, or run another sequence of statements.
+
+// - Example -
+#include "iostream"
+int main(int argc, char **argv){
+   int firstNumber = 12; // Statement 1
+   int secondNumber = 9; // Statement 2
+
+   int sum = firstNumber + secondNumber; // Statement 3
+   std::cout << "The sum of the two number is : " << sum << std::endl; // Statement 4
+   
+   return 0; // Statement 5
+}
+
