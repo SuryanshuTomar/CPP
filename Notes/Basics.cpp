@@ -133,3 +133,70 @@ int main(int argc, char **argv){
    return 0; // Statement 5
 }
 
+// ---------------------------------------------------------------------------------------------------------
+// => INPUT AND OUTPUT -
+
+// - We can take an input from the console or output something to the console using streams from namespace std(Standard).
+
+// Streams           Purpose
+// std::cout         Printing data to the console(terminal)
+// std::cerr         Printing erros to the console
+// std::clog         Printing log messages to the console
+// std::cin          Reading data from the terminal/console
+
+// - Example - 
+// Printing Data to console
+#include "iostream"
+int main(){
+std::cout << "The number is : "<< 12 << std::endl;
+
+int age {12};
+std::cout << "The age is : " << age << std::endl;
+
+// Printing Error
+std::cerr << "std::cerr output : Something went wrong" << std::endl;
+
+// Printing Log message
+std::clog << "std::clog output : This is a log message" << std::endl;
+
+return 0;
+}
+
+// - Example - 
+// Reading Data from console
+#include "iostream"
+int main(){
+int age;
+std::string name;
+
+// Taking Input
+// std::cout << "Please type in your Last Name : " << std::endl;
+// std::cin >> name;
+
+// Taking Input
+// std::cout << "Plase type in your age : " << std::endl;
+// std::cin >> age;
+
+// Chaining Input
+std::cout << "Please type in your Last name and age, seprated by space : " << std::endl;
+std::cin >> name >> age;
+
+std::cout << "Hello " << name << "! You are " << age << "years old" << std::endl;
+return 0;
+}
+
+
+// - Example - 
+// Reading Data from console with space
+// Syntax -> std::getLine(stream, storingVariable)
+#include "iostream"
+#include "string"
+int main(){
+std::string fullName;
+
+std::cout << "Please type in your Full Name : " << std::endl;
+std::getline(std::cin, fullName);
+
+std::cout << "Your name is : " << fullName << std::endl;
+return 0;
+}
