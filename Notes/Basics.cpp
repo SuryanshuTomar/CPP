@@ -200,3 +200,39 @@ std::getline(std::cin, fullName);
 std::cout << "Your name is : " << fullName << std::endl;
 return 0;
 }
+
+
+// --------------------------------------------------------------------------------------------------------
+// => C++ PROGRAM EXECUTION MODEL AND MEMORY MODEL - 
+
+
+// --------------------------------------------------------------------------------------------------------
+// => CORE FEATURES VS STANDARD LIBRARY VS STL -
+
+
+// --------------------------------------------------------------------------------------------------------
+// => DATA TYPES AND VARIABLES - 
+
+// - Data Types -
+// 1. int - used to represent whole numbers or integers
+// 2. double and float - used to represent decimal numbers
+// 3. char - used to represent charachter values.
+// 4. bool - used to represent values in true or false which will be stored as binary in memory
+// 5. string - used to represent string values
+
+// Other keywords we can use
+// 1. void - it is used when we don't want to specify any data type and is typeless
+// 2. auto - this keyword is used when we want the compiler to automatically detect the type of the value.
+
+// - Variables - 
+// - Variable is basically nothing but the name of a memory location that we use for storing data. We can change the value of a variable in C or any other language, and we can also reuse it multiple times.
+
+// --------------------------------------------------------------------------------------------------------
+// => Number System -
+
+// - Number System allows us to transform data from what is convinient to us in reading and write to a form what is convinient for the Computer System. 
+// - We can also use the Number System for vice versa also.
+
+// Article for More - https://blog.devgenius.io/number-systems-and-their-conversions-using-c-5b1ea99f200b
+
+// ---------------------------------------------------------------------------------------------------------
