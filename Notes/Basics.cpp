@@ -225,7 +225,46 @@ return 0;
 // 2. auto - this keyword is used when we want the compiler to automatically detect the type of the value.
 
 // - Variables - 
-// - Variable is basically nothing but the name of a memory location that we use for storing data. We can change the value of a variable in C or any other language, and we can also reuse it multiple times.
+// - Variable is basically nothing but the name of a memory location that we use for storing specific types of data. 
+// - We can change the value of a variable in C or any other language, and we can also reuse it multiple times.
+// Syntax - For Variable Declaration and Initialization
+// Variable Declaration with may contain random garbage value -
+// -> data_type variable_name;
+
+// A. Assignment Variable Initialization -
+// Variable Declaration And Initailization -
+// -> data_type variable_name = value;
+
+// B. Braced Variable Initialization - 
+// - Variable Declaration Braced Initialization which Initializes the variable to default value -
+// -> data_type variable_name {};
+
+// - Variable Initialization to some value -
+// -> data_type variable_name {value};
+
+// - Variable Initialization can be expressions also -
+// -> data_type variable_name {value1 + value2};
+
+// - Variable Initialization with values other then the specified type -
+// -> data_type variable_name {non_specified_type_value}; // O/P -> Error/Warning
+
+// C. Functional Variable Initialization - 
+// - Variable Initialization to some value -
+// -> data_type variable_name (value);
+
+// - Variable Initialization can be expressions also -
+// -> data_type variable_name (value1 + value2);
+
+// - Variable Initialization with values other then the specified type -
+// -> data_type variable_name {non_specified_type_value}; // Implicit Type Conversion of value will occur.
+
+// Note: It is preferable to use Braced Type Intialization.
+
+// 1. Integers - 
+// - Keyword - int
+// - Stores Integers, whole numbers
+// - Typically occypies 4 bytes(32bits) or more in memory
+
 
 // --------------------------------------------------------------------------------------------------------
 // => Number System -
@@ -233,6 +272,19 @@ return 0;
 // - Number System allows us to transform data from what is convinient to us in reading and write to a form what is convinient for the Computer System. 
 // - We can also use the Number System for vice versa also.
 
+// Representing 15 in different number systems - 
+// int number1 = 15; // Decimal 
+// int number2 = 017; // Octal
+// int number3 = 0x0f; // Hexadecimal
+// int number4 = 0b00001111; // Binary - C++14
+
 // Article for More - https://blog.devgenius.io/number-systems-and-their-conversions-using-c-5b1ea99f200b
+
+// Note: 
+// 1. All data is represented by a bunch of grouped cells of 0's and 1's in memory.
+// 2. As the range of your data grows, so will the number of digits you need to represent the data in the memory.
+// 3. Hexadecimal system makes it a little easier for humans to handle streams of data with 1's and 0's
+// 4. Octal has the same goal as Hexadecimal, but its almost no longer used in modern times.
+
 
 // ---------------------------------------------------------------------------------------------------------
