@@ -21,10 +21,40 @@ int notes(){
       cout << endl;
 }
 
+void minAndMaxInArray(){
+      int arrLength;
+      cout << "Enter the length of array : ";
+      cin >> arrLength;
+
+      int arr[100];
+      cout << "Now Enter " << arrLength << " elements with space between them : ";
+      int min = INT_MAX;
+      int max = INT_MIN;
+      for(int i = 0; i < arrLength; i++){
+            cin >> arr[i];
+            if(arr[i] < min){
+                  min = arr[i];
+            }
+            if(arr[i] > max){
+                  max = arr[i];
+            }
+      }
+
+      cout << "Your Entered Array is : ";
+      for(int i = 0; i < arrLength; i++){
+            cout << arr[i] << " ";
+      }
+      cout << endl << "Max : " << max << " and Min : " << min << endl; 
+
+}
+
 int main(){
 
       //Q1 - Finding Number of Notes required of the amount -
       notes();
+      
+      // Q2 - Minimum and Maximum in an array -
+      minAndMaxInArray();
 
    return 0;
 }
