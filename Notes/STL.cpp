@@ -15,11 +15,22 @@
 // - The header algorithm defines a collection of functions especially designed to be used on ranges of elements.They act on containers and provide means for various operations for the contents of the containers.
 
 // - Algorithm - 
-//    a. Sorting
+//    a. Sorting (sort(comparator))
 //    b. Searching
 //    c. Important STL Algorithms // https://www.geeksforgeeks.org/c-magicians-stl-algorithms/
 //    d. Useful Array algorithms // https://www.geeksforgeeks.org/useful-array-algorithms-in-c-stl/
 //    e. Partition Operations    // https://www.geeksforgeeks.org/stdpartition-in-c-stl/
+//    f. upperbound
+//    g. lowerbound
+//    h. max_element
+//    i. min_element
+//    j. accumator
+//    k. reverse
+//    l. count
+//    m. find
+//    n. next_permutations
+//    o. prev_permutations
+//    and many more
 
 // - Numeric - 
 //    a. valarray class
@@ -56,7 +67,7 @@
 
 // 3. Functions -
 // - The STL includes classes that overload the function call operator. Instances of such classes are called function objects or functors. Functors allow the working of the associated function to be customized with the help of parameters to be passed.
-// a. Functors
+// a. Functors - Functors are classes which can act as functions
 
 
 // 4. Iterators - 
