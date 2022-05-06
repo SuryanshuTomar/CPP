@@ -57,7 +57,37 @@ int main(){
    //       cout << endl;
    // }
    
+   // Declaring Dynamic Matrix or 2-D Array or Nested Vectors or Vectors
+   vector<vector<int>> vv;
 
+   // Taking Input in Vector of Vectors
+   int vv_input;
+   cout << "Enter Size for Vector of Vector : ";
+   cin >> vv_input;
+
+   for (int i = 0; i < vv_input; i++){
+      int v_input;
+      cout << "Enter Size for " << i+1 << " vector : " << endl;
+      cin >> v_input;
+      cout << "Enter Elements : ";
+      vector<int> temp;
+      for (int j = 0; j < v_input; j++){
+         int element;
+         cin >> element;
+         temp.push_back(element);
+      }
+      vv.push_back(temp);
+   }
+   
+
+   // Printing Vector of Vector
+   cout << "Vector of Vector : " << endl;
+   for (int i = 0; i < vv.size(); i++){
+      for(int j = 0; j < vv[i].size(); j++){
+         cout << vv[i][j] << " ";
+      }  
+      cout << endl;
+   }
 
    return 0;
 }
