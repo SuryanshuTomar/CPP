@@ -32,5 +32,22 @@ int main(){
       cout << endl;
    }
 
+   // SHORT HAND METHOD:
+   // Using Range based
+   cout << "Vector print using Range Based Loop : ";
+   for(int &value: v){
+      cout << value << " ";
+   }
+   cout << endl;
+
+   // Final Short Hand - 
+   // 1. Using Range Based Loop
+   // 2. Using auto keyword to declare an iterator
+   vector<pair<int, int>> vp1 = {{1, 2}, {3, 4}, {5, 6}};
+   for(auto &vp_it : vp1){
+      cout << (vp_it.first) << " " << (vp_it.second) << " ";
+      cout << endl;
+   }
+   
    return 0;
 }
