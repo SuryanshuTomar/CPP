@@ -43,6 +43,20 @@
 		"xtr1common": "cpp",
 		"xutility": "cpp",
 		"vector": "cpp",
-		"random": "cpp"
+		"random": "cpp",
+		"array": "cpp",
+		"deque": "cpp",
+		"filesystem": "cpp",
+		"format": "cpp",
+		"forward_list": "cpp",
+		"list": "cpp",
+		"map": "cpp",
+		"regex": "cpp",
+		"set": "cpp",
+		"span": "cpp",
+		"unordered_map": "cpp",
+		"unordered_set": "cpp",
+		"xhash": "cpp",
+		"xtree": "cpp"
 	}
 }
