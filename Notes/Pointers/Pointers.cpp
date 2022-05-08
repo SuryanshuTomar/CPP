@@ -13,12 +13,20 @@
 // 1. Never in your program declare a pointer without intializing its value. It is considered bad practice because without initializing the pointer variable it will hold a garbage value in memory which might leave our memory prone to security threat as using that memory data can be derefenced and changed. Sometimes the compiler can also throw Segmentation Error.
 
 
+
+
+
 // => Address of Operator (&) -
 // - The address of a variable can be obtained by preceding the name of a variable with an ampersand sign (&), known as the address-of operator.
-// Example:
-// cout << (&var) << endl;
+// - The & character in C++ is dual purpose. It can mean (at least)
+//    - Take the address of a value
+//    - Declare a reference to a type
 
+// Example:
+// int *p = &var1;   // p holds the address of var1;
 // - This would print the address of variable var; by preceding the name of the variable var with the address-of operator (&), we are no longer printing the content of the variable itself but its address.
+// string &s2 = s1;  // s2 is now a reference to s1
+
 
 // Example:
 // #include <iostream>
@@ -38,7 +46,22 @@
 
 // - Here,  we have an integer i and an integer pointer p. The address of(&) operator is used to address i in p that returns the variable’s address. e.g., &i will give us the address of variable i.
 
- 
+// Note:
+// - A reference is not a pointer, they're different although they serve similar purpose. You can think of a reference as an alias to another variable, i.e. the second variable having the same address. It doesn't contain address itself, it just references the same portion of memory as the variable it's initialized from.
+// string s = "Hello, world";
+// string* p = &s; // Here you get an address of s
+// string& r = s; // Here, r is a reference to s    
+
+// s = "Hello, world"; // corrected
+// assert( s == *p ); // this should be familiar to you, dereferencing a pointer
+// assert( s == r ); // this will always be true, they are twins, or the same thing rather
+
+// string copy1 = *p; // this is to make a copy using a pointer
+// string copy = r; // this is what you saw, hope now you understand it better.
+
+
+
+
 
 // => Dereference Operator -
 // - As just seen, a variable that stores the address of another variable is called a pointer. Pointers are said to "point to" the variable whose address they store.
@@ -49,7 +72,8 @@
 //    2. * is the dereference operator and can be read as "value pointed to by.”
  
 
-// Note: The asterisk (*) used when declaring a pointer only means that it is a pointer (it is part of its type compound specifier) and should not be confused with the dereference operator seen above, but which is also written with an asterisk (*). They are simply two different things represented with the same sign.
+// Note: 
+// - The asterisk (*) used when declaring a pointer only means that it is a pointer (it is part of its type compound specifier) and should not be confused with the dereference operator seen above, but which is also written with an asterisk (*). They are simply two different things represented with the same sign.
 
 // Example:
 // #include <iostream>
@@ -77,11 +101,12 @@
 // firstvalue is 10
 // secondvalue is 20
 // thirdvalue is b
- 
-
-// Note: While solving pointers questions, you should use pen and paper and draw better ideas.
 
  
+
+
+
+
 // => Pointer Arithmetic -
 // - Arithmetic operations on pointers behave differently than they do on simple data types we studied earlier. Only addition and subtraction operations are allowed; the others aren’t allowed on pointers. But both addition and subtraction have slightly different behavior with pointers, according to the size of the data type to which they point.
 // - For example, char always has a size of 1 byte, short is generally larger than that, and int and long are even larger; the exact size of these depends on the system. For example, let's imagine that in a given system, char takes 1 byte, short takes 2 bytes, and long takes 4.
@@ -109,7 +134,3 @@
 // Pointers may be compared by using relational operators, such as ==, <, and >. If p1 and p2 point to variables related to each other, such as the same array elements, then p1 and p2 can be meaningfully compared.
 
 
-// =>  What are Void Pointers ?
-// - 
-
-// Examples - 
