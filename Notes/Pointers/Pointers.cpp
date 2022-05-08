@@ -137,3 +137,26 @@
 // Pointers may be compared by using relational operators, such as ==, <, and >. If p1 and p2 point to variables related to each other, such as the same array elements, then p1 and p2 can be meaningfully compared.
 
 
+
+// - IMPORTANT -
+// 1. It is important to note that the cout function is implemented differently in c++ for characters and the other primitives. So, if directly print the other primitive arrays using cout then, cout will output the address of the memory block assigned to the first element of the address(Arr[0]). But if we try to do the same with character array then cout will print the whole char string.
+// - So in case of character arrays - 
+//    a. first a temprory block to store the content of char array is created in the memory.
+//    b. then the content of the temprory block is stored to the assigned variable.
+
+// - Example -
+// int arr[3] = {1, 2, 4};
+// char ch[4] = "str";
+
+// cout << arr << endl; // This will print the address of arr[0]
+// cout << ch << endl; // o/p -> str
+
+// 2. Similarly, if we try to print the pointer address of character then it will not print its address as cout for characters implemented such that they will print the address value and not the address itself until some null charachter is encountered. And we try to dereference a pointer of character then it will straight out print the character value.
+// - Example - 
+// char ch = 'k';
+// char *chPtr = &ch;
+// cout << "chPtr : " << chPtr << endl; 
+// This will print k and then some garbage value untill a null charachter is encountered.
+
+// Note: Pointer of character arrays are a security hazard as pointer points to the first charachter element in the temprory memory block which is assigned to the array in memory which can also lead to read and write of the read only memory in the system.
+
