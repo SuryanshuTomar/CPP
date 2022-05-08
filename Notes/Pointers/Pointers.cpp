@@ -1,6 +1,9 @@
 // => What is Symbol Table? 
 // - Symbol Table is an Important Data Structure created and maintained by the compiler in order to keep track of semantics of vairables -> i.e - it stores information about the scope and binding information about names, information about instances of various entities such as variables, function names, classes, objects etc
 
+// Symbol Table cannot be changed which is used for mapping the array variable to its memory block
+// arr = arr + 1; // So this cannot be done for array because when we assign a new primitive value to the variable a new free new memory block is assigned to the variable and then store the new calculated value of variable in that memory. But if we do that in case of arrays types then its not possible because even if we change the first value of the arrays then after that the rest of the value of array cannot be calculated as the first index of the array is not changed in memory.
+
 // => What are Pointers and why do we need it?
 // - Pointers are containers used to store values just like variable. The only difference is that pointers are used to store a memory location
 // - Pointers can only be declared the same data type it has been referenced to. Like - an integer pointer can only points to an integer value.
