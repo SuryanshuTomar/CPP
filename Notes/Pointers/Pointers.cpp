@@ -160,3 +160,19 @@
 
 // Note: Pointer of character arrays are a security hazard as pointer points to the first charachter element in the temprory memory block which is assigned to the array in memory which can also lead to read and write of the read only memory in the system.
 
+
+// 3. Another thing to note is that, when we pass an array to a function then an array is not passed to the function instead a pointer value of the first element of the array is passed.
+// void fun(int arr[], int size){
+//    cout << "Size of arr : " << sizeof(arr) << endl; // o/p - 8
+// }
+
+// int main(){
+//    int arr[5] = {1, 2, 3, 4, 5};
+//    cout << "Size of arr : " << sizeof(arr) << endl; // o/p - 20
+//    fun(arr, 10);
+//       fun(arr + 2, 10); // Sending array from index 2
+// }
+
+// - In the above code,
+// void fun(int arr[], int size) BST is void fun(int *ptr, int size) 
+// - Benifit of this is that we can send any particular block of arrays.
