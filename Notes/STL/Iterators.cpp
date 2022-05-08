@@ -84,6 +84,11 @@
 // - i++ means next iterator value
 // - i= i+1 means iterator address value + 1 which will result in incrementing iterator address and will not get the next iterator value. So this i=i+1 will not work on non-continuous DS in STL library.
 
+// Note: SHORTHAND
+// - We can also use range based loops in iterators that directly iterate over elements instead of iterating their over their indexes.
+// - Elements in the Range based for loop are copy of elements and not the elements itself.
+// - We can use References(&) if we want to do some changes in the actual container elements itself
+// So Instead of declaring an iterator first before iterating the containers we can also use the auto keyword to declare an iterator and that will also make our code more readable.
 
 // ------------------------------------------------------------------------------------------------------
 // => Iterator in Vectors -
