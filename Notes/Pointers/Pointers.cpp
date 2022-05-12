@@ -176,3 +176,8 @@
 // - In the above code,
 // void fun(int arr[], int size) BST is void fun(int *ptr, int size) 
 // - Benifit of this is that we can send any particular block of arrays.
+
+ 
+// 4. Why Do we need to use *(Astrisk) when declaring a pointer ?
+// a. First - It tells the compiler what is the data type(In this case, * tell the compiler that the variable in which we are storing address is of pointer type)
+// b. Second - Declaring a variable with a data types tells a compiler how many bytes to condider inside a memory (In this case, pointer take 8 bytes)
