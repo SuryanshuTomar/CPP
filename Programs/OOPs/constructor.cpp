@@ -28,6 +28,9 @@ class Hero {
    Hero (int health, string level){
       this -> health = health;
       this -> level = level;
+   }
+
+   void appraisel(){
       cout << "Health is  : " << this -> health << endl;
       cout << "Level  is : " << this -> level << endl;
    }
@@ -40,13 +43,14 @@ int main(){
    Hero *spiderman = new Hero;
    // Hero() constructor will be called just by object creation and "Constructor Called !!" will be printed.
 
-   // Using parameterised constructor
+   // Using parameterised constructor statically
    Hero thor(200);
    cout << "Address of 'thor' object : " << &thor << endl;
-   // this pointer always points to the current object and the above statement proves it.
+   // "this" pointer always points to the current object and the above statement proves it.
 
-   // Using parameterised constructor
-   Hero ironman(100, "Supreme");
+   // Using parameterised constructor dynamically
+   Hero *ironman = new Hero(100, "Supreme");
+   ironman -> appraisel();
    
   return 0;
 }
