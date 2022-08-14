@@ -65,7 +65,10 @@ int main(){
    Hero hawkEye(90, "Medium");
    // This is is copy constructor
    Hero blackWidow(hawkEye);
-   // checking if the hawkEye object constructor value gets copied or not
+   // Another Way to call copy constructor 
+   Hero vision = hawkEye;
+
+   // Checking if the hawkEye object constructor value gets copied or not
    cout << "HawkEye Appraisel  : " << endl;
    hawkEye.appraisel();
    cout << "Black Widow Appraisel : "  << endl;
