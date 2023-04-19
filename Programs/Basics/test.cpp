@@ -1,23 +1,10 @@
 #include <iostream>
+
 using namespace std;
 
-int factorial(int n){
-   if(n == 0 || n == 1){
-      return 1;
-   }
-   return n * factorial(n - 1);
-}
+void Log(const char* message);
 
 
 int main(){
-   int n;
-   cin >> n;
-
-   if(n >= 0){
-      cout << factorial(n) << endl;
-   }
-   else{
-      cout <<"Error" << endl;
-   }
-   return 0;
+   Log("Hello World");
 }
