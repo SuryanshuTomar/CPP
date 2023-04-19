@@ -211,6 +211,28 @@ return 0;
 
 
 // --------------------------------------------------------------------------------------------------------
+// => How C++ Works - 
+
+// 1. There are preprocessor statement are in cpp programs. And any statement that starts with a "#" is a Preprocessor Statement. And the "#" is called Preprocessor Directive
+// 2. Before compiling any other statement in the program, the compiler processes these preprocessor statements. The files/programs involing these preprocessor statements now gets copied to our current program so that we can use the functions and features of the files that involves these preprocessor statements.
+
+// eg- #include<iostream>  -> this is a preprocessor statement and "include<iostream>" is a header files
+
+// 3. After all the preprocessor statements get processed. Our compiler in Cpp program start executing statements line by line from the int main() function. This "int main()" is the starting point of any cpp program and without it we won't be able to execute/run our cpp program and compiler will also throw an error.
+// 4. So when our compiler has done executing the code line by line, this means that our code has now been converted to low-level code to machine-level code(machine code -> binary code). And an obj(object) file will be created. And when we build our code, a exe(executable) file will be created which we can run as a command line application.
+
+// Note: 1. If we create a cpp application using applications like visual studio, Then if we create mutliple files and declare those function at the top of our main program and we build our project, then the linker will find if the definition of those function we declared at the start of our program, exists in our project or not. And if they exist then the those definition will be executed otherwise it will throw an error.
+// 2. But if we are not creating a cpp application and simply creating these files for our project, then we have to manually include those file in our main program file along.
+
+
+
+// --------------------------------------------------------------------------------------------------------
+// => Header Files - 
+
+
+
+
+// --------------------------------------------------------------------------------------------------------
 // => DATA TYPES AND VARIABLES - 
 
 // - Data Types -
