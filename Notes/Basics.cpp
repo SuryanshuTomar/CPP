@@ -237,7 +237,7 @@ int main() {
 // => How C++ Works -
 
 // 1. There are preprocessor statement are in cpp programs. And any statement
-// that starts with a "#" is a Preprocessor Statement. And the "#" is called
+// that starts with a "#include" is a Preprocessor Statement. And the "#" is called
 // Preprocessor Directive
 // 2. Before compiling any other statement in the program, the compiler
 // processes these preprocessor statements. The files/programs involing these
