@@ -315,6 +315,13 @@ int main() {
 
 // So this is how the working of the header file takes place by telling the compiler to process the header file with the name "filename" using the pre-processor directive #include.
 
+// Note - Today's best practice is to use only #pragma once and don't bother with guards at all. 
+
+// Reasons being -
+// 1. All major compilers been supporting this forever and that is not going to change.
+// 2. Using "#pragma once" in header files allows the compiler to use its internal caches which is of course faster than using the pre-processor which will always include the contents of your file just to later stumble on your guards and dismiss the whole thing.
+// 3. It's a lot shorter and easier to add/maintain
+
 // --------------------------------------------------------------------------------------------------------
 // => DATA TYPES AND VARIABLES -
 
