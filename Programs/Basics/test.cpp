@@ -1,10 +1,12 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
-void Log(const char* message);
+int main() {
+  string name{};
+  cout << "Enter your name : " ;
+  getline(cin, name);
 
-
-int main(){
-   Log("Hello World");
+  cout << "Your name is : " << name << endl;
 }
