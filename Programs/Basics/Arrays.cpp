@@ -51,7 +51,15 @@ int main(){
    int* arrHeap = new int[10];
    // This array will be not destroyed when the compiler finished executing the program. We have manually delete this array.
 
-   
+   // Initializing and Accessing Heap Array - 
+   // *arrHeap = 1;
+   // or
+   *(arrHeap + 0) = 1;
+   *(arrHeap + 1) = 2;
+   *(arrHeap + 2) = 3;
+   *(arrHeap + 3) = 4;
+
+   cout << "Array Heap : Index 2 value : " << *(arrHeap + 2) << endl;
 
    return 0;
 }
