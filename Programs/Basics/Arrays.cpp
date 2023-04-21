@@ -42,5 +42,16 @@ int main(){
    int arrLength = sizeof(Grades) / sizeof(int);
    cout << "The size of the array is : " << arrLength << endl;
 
+   // Creating an array in Stack Memory and Heap Memory - 
+   // 1. Array in Stack Memory -
+   int arrStack[10];
+   // This array will be destroyed when the compiler finished executing the program.
+
+   // 2. Array in Heap Memory -
+   int* arrHeap = new int[10];
+   // This array will be not destroyed when the compiler finished executing the program. We have manually delete this array.
+
+   
+
    return 0;
 }
