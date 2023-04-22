@@ -32,7 +32,7 @@ int main(){
    // vector<pair<int, int>> p;
 
    // Declaring and Initalizing the vector
-   vector<int> vv = {2, 3, 4, 5};
+   vector<int> v = {2, 3, 4, 5};
 
    // Taking Input in vector
    int vector_size_input;
@@ -57,6 +57,13 @@ int main(){
    // Predefining the size of the vector and prefilling the vector
    vector<int> v2(10, 3);
    // printVector(v2);
+
+   // Copy all the elements from an array to the vector
+   int arr[5] = {1, 2, 3, 4, 5};
+   vector<int> arrCopy(arr, arr + 5);
+
+   // Copy all the elements from an vector to the vector
+   vector<int> vecCopy(arrCopy);
 
    vector<int> v3;
    // Adding To the last of the Vector
