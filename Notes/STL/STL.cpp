@@ -51,13 +51,13 @@
 //    - priority_queue
 //    - stack
 
-// c. Ordered Associative Containers : implement sorted data structures that can be quickly searched (O(log n) complexity).
+// c. Ordered Associative Containers : implement sorted data structures that can be quickly searched. Complexity for search is O(logn) and for insert and delete is O(nlogn). Data in these containers will be sorted. These are implemented using Self Balancing BST like Red-Black Tree.
 //    - set
 //    - multiset
 //    - map
 //    - multimap
 
-// d. Unordered Associative Containers : implement unordered data structures that can be quickly searched
+// d. Unordered Associative Containers : implement unordered data structures that can be quickly searched. Complexity for search, insert and delete for these are O(1) -> Average and  O(n) -> Worst Case.  These are implemented using Hash Table.
 //    - unordered_set (Introduced in C++11)
 //    - unordered_multiset (Introduced in C++11)
 //    - unordered_map (Introduced in C++11)
