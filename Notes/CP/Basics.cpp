@@ -148,3 +148,117 @@
 // 3. Time Limit Exceeded (TLE)
 // 4. TLE and RE in Recursions
 // 5. Compilation Error (CE)
+
+// ------------------------------------------------------------------------------------------
+// - No of Operations allowed in online judge platforms -
+
+// - 10^7 - 10^8 in 1sec (as time limit for these platform is 1sec only to
+// execute)
+
+// Note:
+// 1. The 1sec time for these online judge platform is for execution time and
+// compilation time is included in this 1sec.
+// -> Operations - Time Taken
+//    10^7           1sec
+//    10^8           10sec
+//    10^9           100sec ~ 1.5min
+//    10^10          1000sec ~ 15min
+//    10^11          100000sec ~ 150min ~ 2.5hr
+
+// 2. The value of is N < 10^5.
+// 3. If value of N is 10^5 allowed, then O(N^2) time complexity is not allowed
+// because N^2 mean 10^5 * 10^5 = 10^10, which is greater than the number of
+// operation allowed per second which is 10^7 operation.
+// 4. 1 < LogN < N < NLogN < N^2 < 2^N <3^N and so on... -> Complexity from less
+// to more
+
+// 5. If Constraints are:
+//    1 <= T <= 100000
+//    1 <= N <= 100000
+//    1 <= a[i] <= 1000
+// for below code -
+// int main() {
+//   int t; // testcases
+//   cin >> t;
+
+//   while (t--) {
+//     int n;
+//     cin >> n;
+//     int sum = 0;
+//     for (int i = 0; i < n++ i) {
+//       int x;
+//       cin >> x;
+//       sum += x;
+//     }
+//     cout << sum << endl;
+//   }
+// }
+
+// Then, its time complexity will be -
+// O(T*N) ~ O(N^N) ~ O(N^2) which is 10^5 * 10^5 = 10^10
+// which means the above code will throw a TLE because it won't run in 1sec as
+// 10^10 is greater than 10^7 operations.
+
+// But if below Constraints are given, then the same code will execute in 10^7
+// operation which means it will execute in 1sec time limit and don't throw the
+// error of TLE.
+//    1 <= T <= 100000
+//    1 <= N <= 100000
+//    1 <= a[i] <= 1000
+// Sum of N over all Test cases is < 10^7
+// for above code.
+
+// And it is because now the sum for every test case and N will be less than
+// 10^7 operation. So, TC will total no. of test case and N which is 10^7 ~
+// O(T) ~ O(N)
+
+// Explaination -
+// A test is a single file that your program runs on and must answer within the
+// time limit. Often a test is divided into multiple test cases, and your
+// program is still required to answer the entire file in the time limit. So it
+// must answer all test cases of a single file within the time limit.
+
+// For example, let's say that n is at most 105. And let's say you can answer
+// one test case in O(n) time.
+
+// Without a sum guarantee, the worst case is that every test case has n=105,
+// which will make your solution TLE if the number of test cases is a decent
+// size. And if n is describing the length of an array, you don't even have
+// enough time to read the input.
+
+// One solution the authors might do is lower the constraint on n for each test
+// case just enough so that a slower solution would still fail. This is
+// sometimes done, but it can be a problem when the slow solution isn't that
+// much slower, and you really need a big test case to distinguish them.
+
+// Let's say instead the statement says that the sum of n over all test cases is
+// at most 105. Now, the O(n)  solution will pass, because the total time is
+// n1+⋯+nt≤10^5 where ni is the value of n in the i-th test case of the file.
+// This will also give the author more flexibility to have some tests with a few
+// very large test cases and other tests with a lot of small test cases. And you
+// as the contestant can stop thinking about test cases as long as you have this
+// guarantee about the sum.
+
+// -----------------------------------------------------------------------------------------
+// -  Modular Arithmetic -
+
+// - Formulaes -
+// 1. (a + b) % M = ((a % M) + (b % M) % M)
+// 2. (a * b) % M = ((a % M) * (b % M) % M)
+// 3. (a - b) % M = (((a % M) - (b % M) + M) % M)
+// 4. (a / b) % M = (((a % M) * ((b^(-1)) % M) % M) % M)
+
+// - Print the answer in Modular Arithmetic (M = 10 ^ 9 + 7) and Why ?
+// - Suppose, we have to find the factorial of 50, But the number of factorial
+// 50 will be so big that we can not store the result even in "long long" data
+// type. And After some point it cannot even be calculated. That's why modular
+// arithmetic properties are used so that we can find the result. Like M is
+// given 47, then when we do Fact  = (Fact * number) % M, then the number that
+// is stored in "Fact" will always be less than 47. And that is why modulo is
+// used in these cases.
+// - M => 10 ^ 9 + 7 value is choosen because,
+//    a. This is a prime number is very close to the max value of int range. And
+//    final answers can be stored in int itself. b. MMI(Multiplicative Inverse)
+//    -> This cannot be calculated for any number. But it can be calculated
+//    within a range of 1 to any prime number and since M is a prime number we
+//    can caluclate the MMI within this big range.
