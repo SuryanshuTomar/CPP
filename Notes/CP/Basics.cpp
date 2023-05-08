@@ -12,7 +12,8 @@
 // strings and we dont use double and float because of precision errors. These
 // float and double will have pricsion error if we calculate larger numbers
 // using them.
-// 2. We can use "LL" as suffix for the long long int and "L" for the long int.
+// 2. We can use "LL" as suffix for the long long int and "L" for the long int
+// when defining the variables.
 // 3. We can print the fixed part of float and double using the "fixed" keyword
 // in the print statement. eg - cout << fixed << 100.23 << endl; -> 100
 // 4. We can also set till how many pricision digits we want to print the float
@@ -76,16 +77,20 @@
 //   }
 // }
 
-// Note: If we want to add a charachter to the back of the string. Then there are two methods -
+// Note: If we want to add a charachter to the back of the string. Then there
+// are two methods -
 // 1. string.push_back();
 // 2. string concatination. (str1 + str2)
 
-// But which one is better. So string.push_back() takes O(1) time to push into the string. Whereas string concatination first creates a new string in the memory add str1 to it and then str2 to it and then store the the resultant and this take O(size_of_string) amount of time. 
+// But which one is better. So string.push_back() takes O(1) time to push into
+// the string. Whereas string concatination first creates a new string in the
+// memory add str1 to it and then str2 to it and then store the the resultant
+// and this take O(size_of_string) amount of time.
 
 // ---------------------------------------------------------------------------------------
 // => Arrays -
 
-// -> Taking input for 2D-Array - 
+// -> Taking input for 2D-Array -
 // int main() {
 //   int rows{}, cols{};
 //   cin >> rows >> cols;
@@ -108,20 +113,24 @@
 //   }
 // }
 
-// -> Size of Array we can define - 
-// 1. If we are defining an array locally, then we can define it in a size of ~10^5. It is because when we declare any variable locally it get stored in the Memory Segment of the Stack Memory(limit size of 8MB) which has a limited amount of memory.
-// int main() {
+// -> Size of Array we can define -
+// 1. If we are defining an array locally, then we can define it in a size of
+// ~10^5. It is because when we declare any variable locally it get stored in
+// the Memory Segment of the Stack Memory(limit size of 8MB) which has a limited
+// amount of memory. int main() {
 //   int n = 1e7;
 //   int a[n];
 
 //   a[n - 1] = 7;
 //   cout << a[n - 1];
 // }
-// It will throw a segmentation fault as we have defined the size of array is 10^7.
+// It will throw a segmentation fault as we have defined the size of array is
+// 10^7.
 
-// 2. If we are defining an array globally, then we can define it in a size of ~10^7. It is because when we declare any variable globally it gets stored in the Data Segment of the Heap Memory which usually dont have any particular limit on how much it can store.
-// const int n = 1e7;
-// int a[n];
+// 2. If we are defining an array globally, then we can define it in a size of
+// ~10^7. It is because when we declare any variable globally it gets stored in
+// the Data Segment of the Heap Memory which usually dont have any particular
+// limit on how much it can store. const int n = 1e7; int a[n];
 
 // int main() {
 //   a[n - 1] = 7;
@@ -130,3 +139,12 @@
 // It won't throw any error and will run.
 
 // 3. The size of array defined in the global scope should be a constant.
+
+// -------------------------------------------------------------------------------------
+// - Common Online Judge Verdicts -
+
+// 1. Runtime Error (RE)
+// 2. Memory Limit Exceeded (MLE)
+// 3. Time Limit Exceeded (TLE)
+// 4. TLE and RE in Recursions
+// 5. Compilation Error (CE)
