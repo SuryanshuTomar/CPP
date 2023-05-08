@@ -7,6 +7,20 @@ using namespace std;
 // particular function is a friend.
 // Syntax : friend { Class_Name } { Function_Name }
 
+/*
+Properties of friend function -
+1. It is not in the scope of class. (It will not become the part of the class).
+2. Since it is not in the scope of the class , it cannot be called from the
+object of that class.
+3. So, it can only be invoked directly without the object of the class, like a
+normal function.
+4. These functions usually have class objects as parameteres, for which the
+functions is declared a friend.
+5. Can be declared inside public or private access specifier.
+6. It cannot directly access the class members and can only access these class
+members using their object passed as parameters only.
+*/
+
 // class
 class Complex {
   // private members
