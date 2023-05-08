@@ -132,6 +132,8 @@
 // the Data Segment of the Heap Memory which usually dont have any particular
 // limit on how much it can store. const int n = 1e7; int a[n];
 
+// Note: Also, global arrays are always initialized to their default values. Like int global array will be initialized to 0 automatically.
+
 // int main() {
 //   a[n - 1] = 7;
 //   cout << a[n - 1];

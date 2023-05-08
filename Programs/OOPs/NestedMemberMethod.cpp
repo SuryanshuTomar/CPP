@@ -31,8 +31,8 @@ bool Binary ::check_binary() {
 }
 
 string Binary ::ones_compliment() {
-  // This is Nesting Methods or Member Function -> Because we are calling other
-  // class method in this class methods.
+  // This is Nesting Methods or Member Function -> Because we are calling the
+  // class method in this class other methods.
   if (!check_binary()) {
     // cout << "Invalid Number format and cannot be inverted!!" << endl;
     return "";
