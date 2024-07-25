@@ -31,8 +31,8 @@ int main() {
 
 // - There are -
 // 1. Compile Time Errors - (Syntax And Semantic Errors)
-// a. Syntax Errors
-// b. Semantic Errors
+//    a. Syntax Errors
+//    b. Semantic Errors
 // 2. Run Time Errors
 // 3. Linker Errors
 // 4. Logical Errors
@@ -237,8 +237,8 @@ int main() {
 // => How C++ Works -
 
 // 1. There are preprocessor statement are in cpp programs. And any statement
-// that starts with a "#include" is a Preprocessor Statement. And the "#" is called
-// Preprocessor Directive
+// that starts with a "#include" is a Preprocessor Statement. And the "#" is
+// called Preprocessor Directive
 // 2. Before compiling any other statement in the program, the compiler
 // processes these preprocessor statements. The files/programs involing these
 // preprocessor statements now gets copied to our current program so that we can
@@ -310,16 +310,25 @@ int main() {
 // -> How do C++ Header Files work?
 // There are two things you need to remember while including a header :
 
-// 1. #include: This is the pre-processor directive that tells the compiler to process the file before compilation and includes all the functions or data members in the file.
+// 1. #include: This is the pre-processor directive that tells the compiler to
+// process the file before compilation and includes all the functions or data
+// members in the file.
 // 2. <filename.h>: This is the name of the header which you want to include.
 
-// So this is how the working of the header file takes place by telling the compiler to process the header file with the name "filename" using the pre-processor directive #include.
+// So this is how the working of the header file takes place by telling the
+// compiler to process the header file with the name "filename" using the
+// pre-processor directive #include.
 
-// Note - Today's best practice is to use only #pragma once and don't bother with guards at all. 
+// Note - Today's best practice is to use only #pragma once and don't bother
+// with guards at all.
 
 // Reasons being -
-// 1. All major compilers been supporting this forever and that is not going to change.
-// 2. Using "#pragma once" in header files allows the compiler to use its internal caches which is of course faster than using the pre-processor which will always include the contents of your file just to later stumble on your guards and dismiss the whole thing.
+// 1. All major compilers been supporting this forever and that is not going to
+// change.
+// 2. Using "#pragma once" in header files allows the compiler to use its
+// internal caches which is of course faster than using the pre-processor which
+// will always include the contents of your file just to later stumble on your
+// guards and dismiss the whole thing.
 // 3. It's a lot shorter and easier to add/maintain
 
 // --------------------------------------------------------------------------------------------------------
